@@ -1,10 +1,229 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="static/style.css">
+
+<title>Daichi Teruya</title>
 </head>
 
-<body>
-  <h1>Test Page</h1>
-</body>
+<body translate="no">
+<div class="wrap">
 
+<header>
+  <div id="catch">
+    <img src="static/pic/name.png">
+  </div>
+</header>
+
+<nav>
+<div class="left-space"></div>
+<div class="center">
+  <div id="toggle"><a>menu</a></div>
+  <ul id='menu'>
+    <li><a class="nav-link" href="#introduce">自己紹介</a></li>
+    <li><a class="nav-link" href="#projects">プロジェクト</a></li>
+    <li><a class="nav-link" href="#researches">研究</a></li>
+    <li><a class="nav-link" href="#activities">活動</a></li>
+    <li><a class="nav-link" href="#prizes">受賞歴</a></li>
+    <li><a class="nav-link" href="#media">メディア掲載</a></li>
+    <li><a class="nav-link" href="#contact">連絡先</a></li>
+  </ul>
+</div>
+<div class=right-space></div>
+</nav>
+
+<article>
+<div class="right-space"></div>
+<div class="center">
+  <section>
+    <div class="section-title" id="introduce">
+      <span class="jsection">自己紹介</span>
+      <span class="esection">Introduce</span>
+    </div>
+    <div id="introduce-container">
+      <div class="text">
+        <ul>
+          <li>国立東京農工大学 工学府 博士前期課程 電子情報工学専攻 知能・情報工学専修 中條研究室<span class="en">Doctral Course Student, Nakajo Lab., Intelligence and Information Engineering Cource, Dept. of Electronic and Information Engineering, Grad. Sch. of Eng., Tokyo University of Agriculture and Technology</span></li>
+          <li>日本学術振興会 特別研究員 DC1<span class="en">JSPS Research Fellowships for Young Scientists DC1</span></li>
+          <li>平成29年度未踏IT人材発掘・育成事業 クリエータ<span class="en">Creator of MITOU Program 2017</span></li>
+        </ul>
+      </div>
+      <div class="catch">
+        <img id="face" src="static/pic/face.png">
+      </div>
+    </div>
+
+    <div>
+      <h2>経歴</h2>
+      <ul>
+          <li>2018/4 - now 国立東京農工大学 工学府 博士後期課程 電子情報工学専攻 知能・情報工学専修 中條研究室<span class="en">Doctoral Course Student, Intelligence and Information Engineering Course, Dept. of Electronic and Information Engeneering, Grad. Sch. of Eng., Tokyo University of Agriculture and Technology</span></li>
+        <li>2017/4 - 2018/3 国立東京農工大学 工学府 博士前期課程 情報工学専攻 中條研究室<span class="important">早期卒業</span><span class="en">Master of Eng., Nakajo Lab., Dept. of Computer and Information Sciences, Grad. Sch. of Eng., Tokyo University of Agriculture and Technology</span></li>
+        <li>2015/4 - 2017/4 国立東京農工大学 工学部 情報工学科 中條研究室<span class="en">Bachelor of Eng., Nakajo Lab., Dept. of Computer and Information Sciences, Tokyo University of Agriculture and Technology</span></li>
+        <li>2010/4 - 2015/3 国立沖縄工業高等専門学校 メディア情報工学科 正木研究室<span class="en">Foundation Degree of Eng., Masaki Lab., Department of Media Information, National Institute of Technology, Okinawa Collage</span></li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div class="section-title" id="projects">
+      <span class="jsection">プロジェクト</span>
+      <span class="esection">Projects</span>
+    </div>
+    <div id="projects-container">
+      <div class="project" id="mulvery">
+        <div class="catch">
+          <img id="logo-mulvery" src="static/pic/logo_mulvery.png">
+        </div>
+        <div class="text">
+          <div class="title">RubyプログラムからCPU+FPGAシステムのアプリケーションを生成するフレームワーク</div>
+          <div class="etitle">A framework which synthesis an application for CPU+FPGA systems from software source code written in Ruby</div>
+        </div>
+      </div>
+      <div class="project" id="arisan">
+        <div class="catch">
+          <img src="">
+        </div>
+        <div class="text">
+          <div class="title">アリの労働力割当てモデルを応用した自律分散システム</div>
+          <div class="etitle">An autonomous distributed system using the model of labor allocation of ants</div>
+        </div>
+      </div>
+      <div class="project" id="anyware">
+        <div class="catch">
+          <img src="static/pic/logo_anyware.png">
+        </div>
+        <div class="text">
+          <div class="title">部屋の壁をすべてタッチパネルにする仕組みとアプリプラットフォーム</div>
+          <div class="etitle">A system which make room's wall be touch panel, and its application platform</div>
+        </div>
+      </div>
+      <div class="project" id="kashikon">
+        <div class="catch">
+          <img src="static/pic/logo_kashikon.png">
+        </div>
+        <div class="text">
+          <div class="title">待機電力を発見して自動で削減するコンセント</div>
+          <div class="etitle">A electrical outlet system which finds and cuts standby power automatically</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="section-title" id="researches">
+      <span class="jsection">研究</span>
+      <span class="esection">Researches</span>
+    </div>
+    <div class="research-publications">
+      <h2>査読付き論文</h2>
+      <div id="journals-container"></div>
+    </div>
+    <div class="research-publications">
+      <h2>国内口頭発表</h2>
+      <div id="dconf-container"></div>
+    </div>
+  </section>
+  <section>
+    <div class="section-title" id="activities">
+      <span class="jsection">活動</span>
+      <span class="esection">Activities</span>
+    </div>
+    <div class="activities-block">
+      <h2>コンテスト出場</h2>
+      <div id="contests-container"></div>
+    </div>
+    <div class="activities-block">
+      <h2>講演・発表</h2>
+      <div id="presentations-container"></div>
+    </div>
+    <div class="activities-block">
+      <h2>出展</h2>
+      <div id="exhibitions-container"></div>
+    </div>
+    <div class="activities-block">
+      <h2>その他の活動</h2>
+      <div id="activities-container"></div>
+    </div>
+  </section>
+  <section>
+    <div class="section-title" id="prizes">
+      <span class="jsection">受賞歴</span>
+      <span class="esection">Prizes</span>
+    </div>
+    <div id="prizes-container"></div>
+  </section>
+  <section>
+    <div class="section-title" id="media">
+      <span class="jsection">メディア掲載</span>
+      <span class="esection">Media Appearances</span>
+    </div>
+    <div id="media-container"></div>
+  </section>
+  <section>
+    <div class="section-title" id="contact">
+      <span class="jsection">連絡先</span>
+      <span class="esection">Contact</span>
+    </div>
+    <div id="contact-container">
+      <span id="display-email">e-mail</span>
+      <span id="mail">tmarusa83 _at_ gmail.com</span>
+    </div>
+  </section>
+</div>
+<div class="left-space"></div>
+</article>
+
+<footer>
+<div class="right-space"></div>
+<div class="center">
+  <p><small>Copyright (c) All Rights Reserved. 2018 Daichi Teruya</small></p>
+</div>
+<div class="left-space"></div>
+</footer>
+
+<div id=templates>
+<div id="research-template">
+  <p>
+    <span class="number"></span>
+    <span class="authors"></span>,
+    <span class="title"></span>,
+    <span class="bookinfo"></span>,
+    <span class="year"></span>.
+    <span class="text"></span>
+    <a class="url"></a>
+    <span class="prize"></span>
+  </p>
+</div>
+<div id="titleandyear-template">
+  <p>
+    <span class="number"></span>
+    <span class="title"></span>,
+    <span class="year"></span>.
+    <span class="project"></span>
+    <span class="team"></span>
+    <span class="text"></span>
+    <a class="url"></a>
+    <span class="prize"></span>
+  </p>
+</div>
+<div id="media-template">
+  <p>
+    <span class="number"></span>
+    <span class="title"></span>,
+    <span class="bookinfo"></span>,
+    <span class="year"></span>.
+    <span class="text"></span>
+    <a class="url"></a>
+    <span class="prize"></span>
+  </p>
+</div>
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="static/data.js"></script>
+<script type="text/javascript" src="static/main.js"></script>
+
+</div>
+</body>
 </html>

@@ -1,0 +1,356 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+$width_phone: 479px;
+$width_tablet: 768px;
+
+$font-size-h1: 30px;
+$font-size-h2: 20px;
+$font-size-h3: 10px;
+
+$num-of-menu-item: 7;
+
+body {
+  width: 100%;
+
+  font-family: Helvetica,Arial,YuGothic,"游ゴシック体","Yu Gothic","游ゴシック","ヒラギノ角ゴ ProN","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+  margin: 0;
+  color: #313131;
+}
+
+.wrap {
+  overflow: hidden;
+  padding: 10px;
+}
+
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; }
+h3 { font-size: $font-size-h3; }
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #catch {
+    max-width: 100%;
+    max-height: 100%;
+
+    img {
+      max-width: 100%;
+      align-self: flex-start;
+    }
+  }
+}
+
+article {
+  width: 100%;
+
+  section {
+    margin: 0 0 200px;
+  }
+
+  .section-title {
+    font-weight: bold;
+    margin-top: -60px;
+    padding-top: 60px;
+
+    .jsection {
+      font-size: $font-size-h1;
+    }
+
+    .esection {
+      font-size: $font-size-h2;
+    }
+  }
+}
+
+ul {
+  li {
+    margin-top: 10px;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.en {
+  color: #AAA;
+  font-size: 10pt;
+
+  &::before {
+    content: "\A";
+    white-space: pre;
+  }
+}
+
+
+#introduce-container {
+  display: flex;
+
+  .catch {
+    text-align: center;
+  }
+}
+
+#projects-container .project {
+  margin-top: 30px;
+
+  display: flex;
+  align-items: center;
+
+  .text .title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .catch {
+    text-align: center;
+
+    img {
+      width: 90%;
+    }
+  }
+}
+
+.research-publications,
+.activities-block {
+  margin-bottom: 50px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/*** nav bar ***/
+.nav-link {
+  width:auto;
+  font-size:13px;
+  font-weight:bold;
+  color: black;
+  text-decoration:none;
+  display:block;
+
+  &:hover {
+    background:#CCC;
+  }
+}
+
+nav {
+  width: 100%;
+
+  position: fixed;
+  z-index: 999;
+  top: 0px;
+  left: 0px;
+
+  background-color: #DDD;
+
+  display: flex;
+
+  .container {
+    display: flex;
+  }
+}
+
+#menu {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+  li {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    display: block;
+    padding: 12px 0 10px;
+    text-align: center;
+    text-direction: none;
+  }
+}
+/*** end of navbar ***/
+
+/*** icons ***/
+.important {
+  font-weight: bold;
+
+  color: white;
+  background: #C00000;
+
+  padding: 2px 3px;
+  margin-left: 5px;
+
+  border-radius: 3px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 3px;
+}
+/*** end of icons ***/
+
+#templates {
+  display: none
+}
+
+/*** flex ui settings ***/
+//for mobile
+@media screen and ( max-width: $width_tablet ){
+nav,
+article,
+footer {
+  .center {
+    width: 100%;
+  }
+
+  .left-space, .right-space {
+    display: none;
+  }
+}
+
+#face {
+  margin-top: 15px;
+}
+
+#introduce-container{
+  flex-direction: column-reverse;
+}
+
+#projects-container .project {
+    flex-direction: column;
+}
+
+// nav bar
+#nav {
+  border-bottom: none;
+}
+
+#menu {
+  display: none;
+  
+  li {
+    width: 100%;
+  }
+}
+
+#toggle {
+  display: block;
+  position: relative;
+  width: 100%;
+  background: #222;
+
+  a {
+    display: block;
+    position: relative;
+    padding: 12px 0 10px;
+    border-bottom: 1px solid #444;
+    color: #FFF;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  @mixin toggle {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 20px;
+  }
+
+  &:before {
+    @include toggle;
+    height: 20px;
+    margin-top: -10px;
+    background: #FFF;
+  }
+
+  a:before, a:after {
+    @include toggle;
+    height: 4px;
+    background: #222;
+  }
+
+  a:before {
+    margin-top: -6px;
+  }
+
+  a:after {
+    margin-top: 2px;
+  }
+}
+
+
+}
+
+// for pc
+@media screen and ( min-width: $width_tablet ){
+nav,
+article,
+footer {
+  display: flex;
+  flex-direction: row;
+
+  .left-space, .right-space {
+    flex: 4;
+  }
+  
+  .center {
+    flex: 16;
+    max-width: 960px;
+  }
+}
+
+nav {
+  display: flex;
+}
+
+#introduce-container {
+  .text {
+    flex: 3;
+  }
+
+  .catch {
+    flex: 1;
+
+    img {
+      width: 80%;
+    }
+  }
+}
+
+#projects-container {
+  .project {
+    margin-top: 30px;
+
+    display: flex;
+    align-items: center;
+
+    .text {
+      flex: 3;
+    }
+
+    .catch {
+      flex: 1;
+    }
+  }
+
+  #mulvery .catch img {
+    width: 70% !important;
+  }
+}
+
+nav #toggle {
+  display: none;
+}
+
+#menu li {
+  width: 0% + (100 / $num-of-menu-item);
+}
+
+}
+/*** end of flex ui settings ***/
+
+
+
