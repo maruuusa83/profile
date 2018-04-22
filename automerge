@@ -1,4 +1,4 @@
-ADD_FILE="static/data.js static/main.js static/style.css"
+ADD_FILES="static/data.js static/main.js static/style.css"
 GITHUB_REPO="maruuusa83/profile"
 
 PUSH_URI="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
@@ -7,13 +7,13 @@ if ! grep -q "release-master" <<< "$TRAVIS_BRANCH"; then
   exit 0
 fi
 
+printf '\nAdd compressed files\n'
+git add $ADD_FILES
+git commit -m "an auto commit"
+git push "$PUSH_URI" "release-master"
+
 printf '\nMerge into master\n'
 git checkout master
 git merge --no-ff "release-master"
 git push "$PUSH_URI" "master"
-
-printf '\nAdd compressed files\n'
-git checkout master
-git add $ADD_FILE
-git commit -m "an auto commit"
 
