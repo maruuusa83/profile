@@ -26,5 +26,6 @@ env:
 
 after_success:
   - "chmod a+x automerge"
+  - cd $TRAVIS_REPO_SLUG
   - ./automerge
 
