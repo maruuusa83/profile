@@ -7,13 +7,20 @@ if ! grep -q "release-master" <<< "$TRAVIS_BRANCH"; then
   exit 0
 fi
 
-printf '\nAdd compressed files\n'
-git add $ADD_FILES
-git commit -m "an auto commit"
-git push "$PUSH_URI" "release-master"
+REPO_TEMP=$(mktemp -d)
+git clone "https://github.com/$GITHUB_REPO" "$REPO_TEMP"
+cd "$REPO_TEMP"
 
 printf '\nMerge into master\n'
-git checkout master
+git checkout "master"
 git merge --no-ff "release-master"
-git push "$PUSH_URI" "master"
 
+printf '\nAdd compressed files\n'
+npm install gulp --save
+npm install gulp-cli --save-dev
+npm install gulp-sass --save-dev
+npm install gulp-uglify --save-dev
+gulp
+git add $ADD_FILES
+git commit -m "an auto commit"
+git push "$PUSH_URI" "master"
