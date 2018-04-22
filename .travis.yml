@@ -17,7 +17,6 @@ env:
 
 
 after_success:
-  - "curl -o /tmp/travis-automerge https://raw.githubusercontent.com/cdown/travis-automerge/master/travis-automerge"
-  - "chmod a+x /tmp/travis-automerge"
-  - "BRANCHES_TO_MERGE_REGEX='release-master' BRANCH_TO_MERGE_INTO=master GITHUB_REPO=maruuusa83/profile /tmp/travis-automerge"
+  - "chmod a+x automerge"
+  - automerge
 
