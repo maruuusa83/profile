@@ -1,0 +1,17 @@
+ADD_FILE="static/data.js static/main.js static/style.css"
+GITHUB_REPO="maruuusa83/profile"
+
+PUSH_URI="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
+
+if ! grep -q "release-master" <<< "$TRAVIS_BRANCH"; then
+  exit 0
+fi
+
+git add $ADD_FILE
+git commit -m "an auto commit"
+git push "$PUSH_URI" "release-master" > /dev/null 2>&1
+
+git checkout "master"
+git merge --no-ff "release-master"
+git push "$PUSH_URI" "master" > /dev/null 2>&1
+
