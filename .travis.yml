@@ -2,11 +2,6 @@ language: node_js
 node_js:
   - "7"
 
-install:
-  - git clone https://github.com/$TRAVIS_REPO_SLUG.git $TRAVIS_REPO_SLUG
-  - cd $TRAVIS_REPO_SLUG
-  - git checkout -qf $TRAVIS_COMMIT
-
 before_script:
   - npm install -g gulp
   - npm install gulp --save
@@ -26,6 +21,5 @@ env:
 
 after_success:
   - "chmod a+x automerge"
-  - cd $TRAVIS_REPO_SLUG
   - ./automerge
 
