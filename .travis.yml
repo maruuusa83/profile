@@ -1,9 +1,12 @@
 language: node_js
+node_js:
+  - "7"
 
 before_script:
   - npm install -g gulp
   - npm install gulp --save
   - npm install gulp-cli --save-dev
+  - npm install gulp-sass --save-dev
   - npm install gulp-uglify --save-dev
  
 script: gulp
