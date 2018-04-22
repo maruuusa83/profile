@@ -7,11 +7,23 @@ if ! grep -q "release-master" <<< "$TRAVIS_BRANCH"; then
   exit 0
 fi
 
+REPO_TEMP=$(mktemp -d)
+git clone "https://github.com/$GITHUB_REPO" "$REPO_TEMP"
+
+cd "$REPO_TEMP"
+
+git checkout release-master
+
+printf 'Compress files' >&2
+gulp
+
+printf 'Add compressed files' >&2
 git add $ADD_FILE
 git commit -m "an auto commit"
 git push "$PUSH_URI" "release-master" > /dev/null 2>&1
 
-git checkout "master"
+printf 'Merge into master' >&2
+git checkout master
 git merge --no-ff "release-master"
 git push "$PUSH_URI" "master" > /dev/null 2>&1
 
