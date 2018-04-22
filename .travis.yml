@@ -18,5 +18,5 @@ env:
 
 after_success:
   - "chmod a+x automerge"
-  - travis-automerge
+  - automerge
 
