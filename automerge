@@ -1,0 +1,29 @@
+ADD_FILE="static/data.js static/main.js static/style.css"
+GITHUB_REPO="maruuusa83/profile"
+
+PUSH_URI="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
+
+if ! grep -q "release-master" <<< "$TRAVIS_BRANCH"; then
+  exit 0
+fi
+
+REPO_TEMP=$(mktemp -d)
+git clone "https://github.com/$GITHUB_REPO" "$REPO_TEMP"
+
+cd "$REPO_TEMP"
+
+git checkout release-master
+
+printf 'Compress files'
+gulp
+
+printf 'Add compressed files'
+git add $ADD_FILE
+git commit -m "an auto commit"
+git push "$PUSH_URI" "release-master"
+
+printf 'Merge into master'
+git checkout master
+git merge --no-ff "release-master"
+git push "$PUSH_URI" "master"
+
