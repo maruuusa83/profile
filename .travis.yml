@@ -1,11 +1,18 @@
 language: node_js
 node_js:
-  - "iojs"
   - "7"
 
 before_script:
-  - npm install -g gulp-cli
-  - npm install -g gulp-uglify
+  - npm install -g gulp
+  - npm install gulp --save
+  - npm install gulp-cli --save-dev
+  - npm install gulp-sass --save-dev
+  - npm install gulp-uglify --save-dev
  
 script: gulp
+
+after_success:
+  - "curl -o /tmp/travis-automerge https://raw.githubusercontent.com/cdown/travis-automerge/master/travis-automerge"
+  - "chmod a+x /tmp/travis-automerge"
+  - "BRANCHES_TO_MERGE_REGEX='release-master' BRANCH_TO_MERGE_INTO=master GITHUB_REPO=maruuusa83/profile /tmp/travis-automerge"
 
