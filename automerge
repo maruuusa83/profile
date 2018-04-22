@@ -7,13 +7,13 @@ if ! grep -q "release-master" <<< "$TRAVIS_BRANCH"; then
   exit 0
 fi
 
-printf 'Add compressed files'
-git add $ADD_FILE
-git commit -m "an auto commit"
-git push "$PUSH_URI" "release-master"
-
-printf 'Merge into master'
+printf '\nMerge into master\n'
 git checkout master
 git merge --no-ff "release-master"
 git push "$PUSH_URI" "master"
+
+printf '\nAdd compressed files\n'
+git checkout master
+git add $ADD_FILE
+git commit -m "an auto commit"
 
