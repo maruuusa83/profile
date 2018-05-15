@@ -1,4 +1,4 @@
-ADD_FILE="static/data.js static/main.js static/style.css"
+ADD_FILES="static/data.js static/main.js static/style.css"
 GITHUB_REPO="maruuusa83/profile"
 
 PUSH_URI="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
@@ -9,21 +9,18 @@ fi
 
 REPO_TEMP=$(mktemp -d)
 git clone "https://github.com/$GITHUB_REPO" "$REPO_TEMP"
-
 cd "$REPO_TEMP"
 
-git checkout release-master
+printf '\nMerge into master\n'
+git checkout "master"
+git merge --no-ff "origin/release-master"
 
-printf 'Compress files'
+printf '\nAdd compressed files\n'
+npm install gulp --save
+npm install gulp-cli --save-dev
+npm install gulp-sass --save-dev
+npm install gulp-uglify --save-dev
 gulp
-
-printf 'Add compressed files'
-git add $ADD_FILE
+git add $ADD_FILES
 git commit -m "an auto commit"
-git push "$PUSH_URI" "release-master"
-
-printf 'Merge into master'
-git checkout master
-git merge --no-ff "release-master"
 git push "$PUSH_URI" "master"
-
