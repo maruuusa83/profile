@@ -13,7 +13,7 @@ cd "$REPO_TEMP"
 
 printf '\nMerge into master\n'
 git checkout "master"
-git merge --no-ff "release-master"
+git merge --no-ff "origin/release-master"
 
 printf '\nAdd compressed files\n'
 npm install gulp --save
