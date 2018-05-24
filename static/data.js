@@ -190,9 +190,8 @@ var data = {
     {
       title: "平成29年度未踏IT人材発見・育成プロジェクト 採択",
       year: 2017,
-      text: "「CPU＋FPGAプラットフォームのためのRubyベースの開発環境」",
+      text: "「CPU＋FPGAプラットフォームのためのRubyベースの開発環境」<span class="important">スーパークリエイター認定</span>",
       url: { url: "https://www.ipa.go.jp/jinzai/mitou/2017/seika.html", name: "IPA web site"}
-      prize: '<span class="important">スーパークリエイター認定</span>',
     }, {
       title: "ITfrogs 4期生",
       year: 2012
