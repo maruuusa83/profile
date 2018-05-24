@@ -192,6 +192,7 @@ var data = {
       year: 2017,
       text: "「CPU＋FPGAプラットフォームのためのRubyベースの開発環境」",
       url: { url: "https://www.ipa.go.jp/jinzai/mitou/2017/seika.html", name: "IPA web site"}
+      prize: '<span class="important">スーパークリエイター認定</span>',
     }, {
       title: "ITfrogs 4期生",
       year: 2012
