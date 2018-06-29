@@ -2,7 +2,9 @@ var data = {
   journals:
   [
     { authors: "照屋大地, 宮﨑大智, 中條拓伯",
+      eauthors: "Daichi Teruya, Daichi Miyazaki, Hironori Nakajo",
       title: "Pyjer: 高位合成ツールとSoCを用いたIoT向けデバイスプロトタイピングのためのフレームワーク",
+      etitle: "PyJer : A Framework for Prototyping of IoT Devices with High Level Synthesis Tools and SoC",
       bookinfo: "電子情報通信学会論文誌D, Vol. J100-D, No. 3, pp.287-297",
       text: '<span class="important">学生秀逸論文</span>',
       year: 2017
@@ -15,23 +17,31 @@ var data = {
   [
     {
       authors: "〇照屋大地, 中條拓伯",
+      eauthors: "Daichi Teruya, Hironori Nakajo",
       title: "自律分散システムのための高位合成ツールを用いたオートスケール機構",
+      etitle: "A design of autoscale mechanism using high level synthesis tool for autonomous distributed system",
       bookinfo: "電子情報通信学会, 信学技報, Vol. 118, No. 63, RECONF2018-9, pp. 45-50, ゲートシティ大崎",
       year: 2017
     }, {
       authors: "○照屋大地, 中條拓伯",
+      eauthors: "Daichi Teruya, Hironori Nakajo",
       title: "Ruby言語ベースのハードウェア・ソフトウェアコデザイン環境の実現とリアクティブプログラミングの適用",
+      etitle: "Ruby-based Hardware/Software Co-Design Environment with Applying Reactive Programming",
       bookinfo: "電子情報通信学会, 信学技報, Vol. 116, No. 379, RECONF2017-65, pp. 89-94, 慶応大学日吉キャンパス",
       text: '<span class="important">優秀リコンフィギャラブルシステム講演賞</span>',
       year: 2018
     }, {
       authors: "〇照屋大地, 中條拓伯",
+      eauthors: "Daichi Teruya, Hironori Nakajo",
       title: "IoT/CPS技術を支援する高位合成フレームワークの構想",
+      etitle: "Overview of an HLS Framework Surpporting IoT/CPS Development",
       bookinfo: "電子情報通信学会, 信学技報, Vol. 116, No. 417, RECONF2016-61, pp. 61-66, 慶応大学日吉キャンパス",
       year: 2017
     }, {
       authors: "○照屋大地,  宮﨑大智, 中條拓伯",
+      eauthors: "Daichi Teruya, Daichi Miyazaki, Hironori Nakajo",
       title: "Java言語ベース高位合成ツールおよびCoRAMアーキテクチャ合成フレームワークを用いた音場の可視化システムの構築",
+      etitle: "A Sound Field Visualizer with Java-based High Level Synthesis Tool and CoRAM Architecture Synthesis Framework",
       bookinfo: "電子情報通信学会, 信学技報, Vol. 116, No. 53, RECONF2016-20, pp. 97-102, 富士通研究所",
       year: 2016
     }
