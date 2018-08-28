@@ -7,6 +7,7 @@ $(function(){
 
   // load contents
   render_paper('#journals-container', data["journals"]);
+  render_epaper('#iconf-container', data["international_conf"]);
   render_paper('#dconf-container', data["domestic_conf"]);
   render_titleandyear('#prizes-container', data["prizes"]);
   render_titleandyear('#contests-container', data["contests"]);
@@ -88,6 +89,18 @@ function render_media(place, records){
     var $template = get_template('#media-template');
     $template = render_record($template, records[i]);
     $template = append_data($template, '.number', "[" + (i + 1) + "]");
+
+    $(place).append($template);
+  }
+}
+
+function render_epaper(place, records){
+  for (var i = 0; i < records.length; i++){
+    var $template = get_template('#eresearch-template');
+
+    $template = render_record($template, records[i]);
+    $template = append_data($template, '.number', "[" + (i + 1) + "]");
+    $template = append_data($template, '.title', "\"" + records[i]["title"] + "\"");
 
     $(place).append($template);
   }
