@@ -12,6 +12,12 @@ var data = {
   ],
   international_conf:
   [
+    {
+      authors: "Daichi Teruya, Bipin Indurkhya, Tadakatsu Masaki, Hironori Nakajo",
+      title: "Autonomous Distributed System Based on Behavioral Model of Social Insects",
+      bookinfo: "The 24th International Conference on Parallel and Distributed Processing Techniques and Applications (PDPTA '18), pp. 289--295, CSREA Press, Las Vegas, NV, USA",
+      year: 2018,
+    },
   ],
   domestic_conf:
   [
@@ -21,7 +27,7 @@ var data = {
       title: "自律分散システムのための高位合成ツールを用いたオートスケール機構",
       etitle: "A design of autoscale mechanism using high level synthesis tool for autonomous distributed system",
       bookinfo: "電子情報通信学会, 信学技報, Vol. 118, No. 63, RECONF2018-9, pp. 45-50, ゲートシティ大崎",
-      year: 2017
+      year: 2018
     }, {
       authors: "○照屋大地, 中條拓伯",
       eauthors: "Daichi Teruya, Hironori Nakajo",
