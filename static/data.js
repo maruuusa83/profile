@@ -7,6 +7,7 @@ var data = {
       etitle: "PyJer : A Framework for Prototyping of IoT Devices with High Level Synthesis Tools and SoC",
       bookinfo: "電子情報通信学会論文誌D, Vol. J100-D, No. 3, pp.287-297",
       text: '<span class="important">学生秀逸論文</span>',
+      etext: '[Students Excellent Paper]',
       year: 2017
     }
   ],
@@ -22,6 +23,11 @@ var data = {
   domestic_conf:
   [
     {
+      authors: "Daichi Teruya, Bipin Indurkhya, Tadakatsu Masaki, Hironori Nakajo",
+      title: "Autonomous Distributed System Based on Behavioral Model of Social Insects",
+      bookinfo: "情報処理学会, 第119回 数理モデルと問題解決研究会 (MPS 119), Vol. 2018-MPS-119, No. 4, pp. 1--4, Las Vegas, NV, USA",
+      year: 2018,
+    }, {
       authors: "〇照屋大地, 中條拓伯",
       eauthors: "Daichi Teruya, Hironori Nakajo",
       title: "自律分散システムのための高位合成ツールを用いたオートスケール機構",
@@ -35,6 +41,7 @@ var data = {
       etitle: "Ruby-based Hardware/Software Co-Design Environment with Applying Reactive Programming",
       bookinfo: "電子情報通信学会, 信学技報, Vol. 116, No. 379, RECONF2017-65, pp. 89-94, 慶応大学日吉キャンパス",
       text: '<span class="important">優秀リコンフィギャラブルシステム講演賞</span>',
+      etext: '[Excellent Reconfigurable System Presentation Award]',
       year: 2018
     }, {
       authors: "〇照屋大地, 中條拓伯",
@@ -175,6 +182,7 @@ var data = {
       etitle: "Trendmicro Programming Contest",
       year: 2014,
       prize: '<span class="important">国内7位入賞</span>',
+      eprize: '[Domestic 7th Prize]'
     }, {
       title: "第24回全国高等専門学校プログラミングコンテスト自由部門本選",
       etitle: "24th NIT Programming Contest, Free Part",
@@ -182,6 +190,7 @@ var data = {
       project: "Anyware",
       url: { url: "http://www.procon.gr.jp/?page_id=59711", name: "Procon 24th Web Site" },
       prize: '<span class="important">特別賞 (3位相当)</span>',
+      eprize: '[Special Prize (3rd Prize)]'
     }, {
       title: "第23回全国高等専門学校プログラミングコンテスト自由部門本選",
       etitle: "23th NIT Programming Contest, Free Part",
@@ -189,6 +198,7 @@ var data = {
       project: "かしこん！！",
       url: { url: "http://www.procon.gr.jp/?page_id=59691", name: "Procon 23rd Web Site"},
       prize: '<span class="important">特別賞 (3位相当)</span> <span class="important">イグジットチューンズ賞 (企業特別賞)</span>',
+      eprize: '[Special Prize (3rd Prize)][Exit Tunes Award (Special Award by Company)]'
     }, {
       title: "パソコン甲子園2012 プログラミング部門本選",
       etitle: "Pasocon Koshien 2012 Programming Part",
@@ -203,6 +213,7 @@ var data = {
       project: "RunRunRun",
       url: { url: "http://web-ext.u-aizu.ac.jp/pc-concours/2012hon/13/13_team.html", name: "PCK2012 Web Site"},
       prize: '<span class="important">グランプリ</span>',
+      eprize: '[Grand Prize]'
     }, {
       title: "第22回全国高等専門学校プログラミングコンテスト競技部門本選",
       etitle: "22th NIT Programming Contest, Sports Programming Part",
@@ -215,6 +226,7 @@ var data = {
       year: 2011,
       team: "五年保障",
       prize: '<span class="important">サイボウズ社長賞</span>',
+      eprize: '[Cybozu CEO Prize]'
     }, {
       title: "日本情報オリンピック 本選",
       etitle: "Japanese Olympiad of Information",
@@ -233,6 +245,7 @@ var data = {
       etitle: "IT Shinryo Matsuri 2013 Programming Part",
       year: 2013,
       prize: '<span class="important">第一位</span>',
+      eprize: '[1st Prize]',
     }
   ],
   activities:
@@ -242,6 +255,7 @@ var data = {
       etitle: "2017 MITOU Project",
       year: 2017,
       text: '「CPU＋FPGAプラットフォームのためのRubyベースの開発環境」<span class="important">スーパークリエイター認定</span>',
+      etext: '"Ruby-based Development Environment for CPU＋FPGA Platform" [Certificated Super Creater]',
       url: { url: "https://www.ipa.go.jp/jinzai/mitou/2017/seika.html", name: "IPA web site"}
     }, {
       title: "ITfrogs 4期生",
