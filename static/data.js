@@ -1,6 +1,11 @@
 var data = {
   journals:
   [
+    { authors: "Daichi Teruya, Hironori Nakajo",
+      title: "A Ruby-Based Hardware/Software Co-Design Environment with Functional Reactive Programming: Mulvery",
+      bookinfo: "IEICE Transactions on Information and Systems, Vol. E103.D, No. 9, pp. 1929--1938",
+      year: 2020
+    },
     { authors: "照屋大地, 宮﨑大智, 中條拓伯",
       eauthors: "Daichi Teruya, Daichi Miyazaki, Hironori Nakajo",
       title: "Pyjer: 高位合成ツールとSoCを用いたIoT向けデバイスプロトタイピングのためのフレームワーク",
@@ -14,6 +19,12 @@ var data = {
   international_conf:
   [
     {
+      authors: "Ryota Yamashita, Daichi Teruya, Hironori Nakajo",
+      title: "Parallelization of Recursive Function in Ruby-based Hight-level Synthesis",
+      bookinfo: "2019 International Conference on Field-Programmable Technology (ICFPT), IEEE, 2019/12/9-13, Tianjin, China",
+      year: 2018,
+    },
+    {
       authors: "Daichi Teruya, Bipin Indurkhya, Tadakatsu Masaki, Hironori Nakajo",
       title: "Autonomous Distributed System Based on Behavioral Model of Social Insects",
       bookinfo: "The 24th International Conference on Parallel and Distributed Processing Techniques and Applications (PDPTA '18), pp. 289--295, CSREA Press, Las Vegas, NV, USA",
@@ -23,7 +34,14 @@ var data = {
   domestic_conf:
   [
     {
-      authors: "Daichi Teruya, Bipin Indurkhya, Tadakatsu Masaki, Hironori Nakajo",
+      authors: "〇識名朝彬, 照屋大地, 中條拓伯",
+      eauthors: "Tomoaki Shikina, Daichi Teruya, Hironori Nakajo",
+      title: "ルールベースガイドによるドメイン知識活用型機械学習システムの実現",
+      etitle: "main Knowledge-aware Machine Learning System with Rule-based Guiding",
+      bookinfo: "電子情報通信学会, 信学技報, Vol. 119, No. 286, CPSY2019-44, pp. 23-28, 愛媛県男女共同参画センター",
+      year: 2019
+    }, {
+      authors: "〇Daichi Teruya, Bipin Indurkhya, Tadakatsu Masaki, Hironori Nakajo",
       title: "Autonomous Distributed System Based on Behavioral Model of Social Insects",
       bookinfo: "情報処理学会, 第119回 数理モデルと問題解決研究会 (MPS 119), Vol. 2018-MPS-119, No. 4, pp. 1--4, Las Vegas, NV, USA",
       year: 2018,
